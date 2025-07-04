@@ -6,8 +6,8 @@ import { Header } from "@/components/header"
 import { CreateListingForm } from "@/components/create-listing-form"
 
 export default function CreateListingPage() {
-  const [step, setStep] = useState<"type" | "form">("type")
-  const [listingType, setListingType] = useState<string>("")
+  const [step, setStep] = useState<"type" | "form">("form") // Skip type selection for now
+  const [listingType, setListingType] = useState<string>("item")
   const router = useRouter()
 
   const listingTypes = [
@@ -22,7 +22,7 @@ export default function CreateListingPage() {
       <div className="min-h-screen bg-gray-100">
         <Header />
         <div className="container mx-auto px-4 py-8">
-          <CreateListingForm onSuccess={() => router.push("/")} />
+          <CreateListingForm onSuccess={() => router.push("/my-listings")} />
         </div>
       </div>
     )

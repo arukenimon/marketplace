@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Plus, User, Bell, Mail } from "lucide-react"
+import { Plus, User, Bell, Mail, Search, List } from "lucide-react"
 
 export function Header() {
   return (
@@ -14,7 +14,29 @@ export function Header() {
             <h1 className="text-xl font-bold">Marketplace</h1>
           </Link>
 
+          <nav className="hidden md:flex items-center gap-6">
+            <Link href="/search" className="text-gray-600 hover:text-gray-900">
+              Browse
+            </Link>
+            <Link href="/category/electronics" className="text-gray-600 hover:text-gray-900">
+              Electronics
+            </Link>
+            <Link href="/my-listings" className="text-gray-600 hover:text-gray-900">
+              My Listings
+            </Link>
+          </nav>
+
           <div className="flex items-center gap-4">
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="/search">
+                <Search className="h-5 w-5" />
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="/my-listings">
+                <List className="h-5 w-5" />
+              </Link>
+            </Button>
             <Button variant="ghost" size="icon">
               <Mail className="h-5 w-5" />
             </Button>
