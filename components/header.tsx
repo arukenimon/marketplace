@@ -1,6 +1,6 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Plus, User, Bell, Mail, Search, List } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Plus, User, Bell, Mail, Search, List } from "lucide-react";
 
 export function Header() {
   return (
@@ -18,10 +18,13 @@ export function Header() {
             <Link href="/search" className="text-gray-600 hover:text-gray-900">
               Browse
             </Link>
-            <Link href="/category/electronics" className="text-gray-600 hover:text-gray-900">
+            {/* <Link href="/category/electronicsxxx" className="text-gray-600 hover:text-gray-900">
               Electronics
-            </Link>
-            <Link href="/my-listings" className="text-gray-600 hover:text-gray-900">
+            </Link> */}
+            <Link
+              href="/my-listings"
+              className="text-gray-600 hover:text-gray-900"
+            >
               My Listings
             </Link>
           </nav>
@@ -56,5 +59,5 @@ export function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }
